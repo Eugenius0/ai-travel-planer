@@ -1,10 +1,12 @@
 import os
 import streamlit as st
+import torch
 from unsloth import FastLanguageModel
 from transformers import TextStreamer
 
 # Disable GPU (for CPU-only environments)
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+os.environ["UNSLOTH_CPU"] = "1"  # Enforce Unsloth to use CPU
 
 # Model Configuration
 model_name_or_path = "Eugenius0/lora_model"  # Replace with your model path
@@ -15,9 +17,11 @@ dtype = None  # Let it auto-detect CPU environments
 st.title("AI Travel Planner 🌍")
 st.subheader("Powered by Your Fine-Tuned LLM")
 
+from transformers import AutoTokenizer
+
 # Streamlit loading spinner while the model initializes
 with st.spinner("Loading the model, please wait..."):
-    model, tokenizer = FastLanguageModel.from_pretrained(
+    model, tokenizer = AutoPeftModelForCausalLM.from_pretrained(
         model_name=model_name_or_path,
         max_seq_length=max_seq_length,
         dtype=dtype,
