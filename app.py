@@ -1,12 +1,6 @@
-import os
 import streamlit as st
-import folium
 from streamlit_folium import st_folium
-from fpdf import FPDF
 from unsloth import FastLanguageModel
-
-# Explicitly disable GPU usage
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 # Model configuration
 model_name_or_path = "Eugenius0/lora_model" 
