@@ -17,6 +17,7 @@ dtype = None  # Let it auto-detect CPU environments
 st.title("AI Travel Planner 🌍")
 st.subheader("Powered by Your Fine-Tuned LLM")
 
+from peft import AutoPeftModelForCausalLM
 from transformers import AutoTokenizer
 
 # Streamlit loading spinner while the model initializes
