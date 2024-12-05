@@ -2,24 +2,19 @@ import os
 import streamlit as st
 from unsloth import FastLanguageModel
 
-from unsloth.chat_templates import get_chat_template
+# Set environment to disable GPU
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
-tokenizer = get_chat_template(
-    tokenizer,
-    chat_template = "llama-3.1",
+# Model configuration
+model_name_or_path = "Eugenius0/lora_model" 
+max_seq_length = 2048
+dtype = None  # Keep it None to auto-detect for CPU environments
+
+# Load the model and tokenizer
+model, tokenizer = FastLanguageModel.from_pretrained(
+    model_name=model_name_or_path,
+    max_seq_length=max_seq_length,
+    dtype=dtype,
+    load_in_4bit=True,  # Use 4-bit quantization for efficiency
 )
-FastLanguageModel.for_inference(model) # Enable native 2x faster inference
-
-messages = [
-    {"role": "user", "content": "Continue the fibonnaci sequence: 1, 1, 2, 3, 5, 8,"},
-]
-inputs = tokenizer.apply_chat_template(
-    messages,
-    tokenize = True,
-    add_generation_prompt = True, # Must add for generation
-    return_tensors = "pt",
-).to("cuda")
-
-outputs = model.generate(input_ids = inputs, max_new_tokens = 64, use_cache = True,
-                         temperature = 1.5, min_p = 0.1)
-tokenizer.batch_decode(outputs)
+FastLanguageModel.for_inference(model)  # Enable native 2x faster inference
