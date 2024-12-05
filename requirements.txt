@@ -1,4 +1,3 @@
 streamlit
+huggingface_hub
 unsloth
-huggingface_hub==0.25.2
-torch
