@@ -5,3 +5,4 @@ fpdf
 transformers
 torch
 unsloth
+huggingface_hub==0.25.2
