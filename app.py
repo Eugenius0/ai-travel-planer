@@ -4,22 +4,19 @@ from streamlit_folium import st_folium
 from fpdf import FPDF
 from unsloth import FastLanguageModel
 
-from transformers import AutoModel, AutoTokenizer
+# Model configuration
+model_name_or_path = "Eugenius0/lora_model" 
 max_seq_length = 2048
-dtype = None
+dtype = None  # Keep it None to auto-detect for CPU environments
 
-model_name_or_path = "Eugenius0/lora_model"
-
-from unsloth import FastLanguageModel
-import torch
-
+# Load the model and tokenizer
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = model_name_or_path, 
+    model_name = model_name_or_path,
     max_seq_length = max_seq_length,
     dtype = dtype,
-    load_in_4bit = True,
-    )
-FastLanguageModel.for_inference(model)  # Enable faster inference
+    load_in_4bit = True  # Use 4-bit quantization for memory efficiency
+)
+FastLanguageModel.for_inference(model)  # Enable native 2x faster inference
 
 # Function to generate chatbot response
 def chatbot_response(prompt):
@@ -29,7 +26,7 @@ def chatbot_response(prompt):
         tokenize=True,
         add_generation_prompt=True,
         return_tensors="pt",
-    ).to("cuda")  # Ensure the model is on GPU
+    ).to("cpu")  # Use CPU instead of GPU
 
     outputs = model.generate(
         input_ids=inputs, max_new_tokens=128, use_cache=True
@@ -62,7 +59,7 @@ if st.button("Generate Travel Plan"):
 
         # Show map with Folium
         st.subheader("Map of the Destination:")
-        map_center = [48.0, 7.85]  # Replace with actual coordinates
+        map_center = [48.0, 7.85]  # Replace with real coordinates if available
         travel_map = folium.Map(location=map_center, zoom_start=12)
         folium.Marker(location=map_center, popup="Start here!").add_to(travel_map)
         st_folium(travel_map, width=700, height=500)
