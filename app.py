@@ -16,5 +16,6 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     max_seq_length=max_seq_length,
     dtype=dtype,
     load_in_4bit=True,  # Use 4-bit quantization for efficiency
+    device_map="cpu",   # Explicitly force CPU usage
 )
 FastLanguageModel.for_inference(model)  # Enable native 2x faster inference
