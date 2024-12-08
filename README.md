@@ -61,9 +61,53 @@ The model-centric improvements focused on optimizing the fine-tuning process, en
 - **Data Sources**: Augmented the FineTome dataset with travel-related datasets to improve domain-specific performance.
 - **Data Preprocessing**: Applied techniques like text normalization and deduplication to enhance data quality.
 
-### 2. Fine-Tuning Multiple LLMs
-- Tried fine-tuning smaller models like `Llama-3.1-1B` for faster inference on CPUs.
-- Experimented with HuggingFace FineTuning frameworks to explore alternative approaches.
+### 2. Evaluating Multiple LLMs
+
+As part of the model-centric approach, we evaluated various open-source foundation LLMs to determine the best-performing model for our application while taking our computational and memory limits into consideration and respecting the given time constraints. The goal was to identify a model that balances computational efficiency and quality of generated responses, especially for inference on CPUs.
+
+#### Models Evaluated:
+- **unsloth/Meta-Llama-3.1-8B-bnb-4bit**: 
+  - Pros: Larger model with strong general capabilities.
+  - Cons: Computationally intensive and slow for inference on CPUs.
+
+- **unsloth/Mistral-7B-Instruct-v0.3-bnb-4bit**:
+  - Pros: Smaller and faster, with good instruction-following capabilities.
+  - Cons: Lacked depth and coherence in generating detailed travel plans.
+
+- **unsloth/Phi-3.5-mini-instruct**:
+  - Pros: Very lightweight, suitable for rapid inference on CPUs.
+  - Cons: Struggled to maintain fluency and relevance for travel-related queries.
+
+- **unsloth/Llama-3.2-1B-Instruct-bnb-4bit**:
+  - Pros: Lightweight and efficient for CPU inference, capable of generating relevant responses.
+  - Cons: Limited expressiveness compared to larger models.
+
+- **unsloth/Llama-3.2-3B-Instruct-bnb-4bit** (Selected Model):
+  - Pros:
+    - Balance between computational efficiency and output quality.
+    - Leveraged instruction-tuning for better alignment with user queries.
+    - Offered detailed and coherent responses for travel planning tasks.
+    - Compatible with 4-bit quantization, significantly reducing memory and computation requirements.
+  - Cons:
+    - Slightly slower than smaller models but acceptable for our use case.
+
+#### Why Llama-3.2-3B-Instruct-bnb-4bit?
+1. **Balance of Size and Performance**:
+   - The 3B parameter size provided a sweet spot between the expressiveness of large models and the efficiency of smaller ones.
+   - Generated highly coherent and contextually relevant travel plans, acceptable for our use case.
+
+2. **4-Bit Quantization**:
+   - Reduced memory usage and allowed for efficient inference without compromising performance.
+
+3. **Instruction-Tuned Capabilities**:
+   - Fine-tuned for instruction-following tasks, making it particularly suitable for generating structured travel itineraries.
+
+4. **Adaptability**:
+   - The model showed strong performance across a wide range of travel preferences, including historical landmarks, nightlife, and culinary experiences.
+
+By carefully testing these models, we ensured that the chosen LLM aligns with our application’s goals and provides an optimal user experience in the AI Travel Planner.
+
+---
 
 ---
 
