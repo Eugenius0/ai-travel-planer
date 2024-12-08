@@ -26,13 +26,36 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
 
 ### 1. Performance Improvement Strategies
 
-**Model-Centric Approach**:
-- **Hyperparameter Tuning**: Experimented with `learning_rate`, `warmup_steps`, `max_steps`, and `num_train_epochs` to optimize performance.
-- **Model Selection**: Evaluated multiple open-source LLMs such as `unsloth/Llama-3.2-3B-Instruct` to identify the best-performing model.
-- **Optimization Techniques**:
-  - Used `adamw_8bit` optimizer for memory efficiency.
-  - Applied gradient accumulation with `gradient_accumulation_steps` to improve training throughput.
-  - Employed learning rate schedulers to dynamically adjust learning rates for stable training.
+#### **(a) Model-Centric Approach**
+
+The model-centric improvements focused on optimizing the fine-tuning process, enhancing memory efficiency, and maximizing the performance of the fine-tuned model. Below are the strategies and configurations implemented:
+
+1. **Hyperparameter Tuning**:
+   - **Batch Size and Gradient Accumulation**:
+     - Set `per_device_train_batch_size` to 2 to manage memory constraints of the NVIDIA T4 GPU while effectively simulating a batch size of 8 using `gradient_accumulation_steps` set to 4. This balances memory utilization with training stability.
+   - **Learning Rate**:
+     - Chose a learning rate of `2e-4`, identified through experimentation to ensure optimal convergence without overfitting.
+   - **Warmup Steps**:
+     - Used `warmup_steps` (5) to gradually ramp up the learning rate during the initial training phase, mitigating potential instability from large gradients.
+   - **Epochs and Steps**:
+     - Trained for `1` epoch and capped the total number of steps at `60` to fit within the constraints of our hardware while achieving meaningful performance.
+
+2. **Optimization Techniques**:
+   - **Memory-Efficient Optimizer**:
+     - Utilized the `adamw_8bit` optimizer, which uses 8-bit precision for memory-intensive operations, enabling fine-tuning of large models on GPUs with limited memory.
+   - **Precision Settings**:
+     - Leveraged mixed precision (`fp16` or `bf16`) to reduce memory usage and accelerate computations without compromising model accuracy.
+   - **Regularization**:
+     - Applied `weight_decay` (0.01) to reduce overfitting by penalizing large weights, encouraging generalization.
+
+3. **Fine-Tuning Framework**:
+   - Used the **Unsloth framework** combined with HuggingFace’s `SFTTrainer` to streamline supervised fine-tuning. This framework is optimized for efficiency and flexibility.
+
+4. **Efficient Checkpointing**:
+   - Saved progress periodically using `save_steps` (15) and limited stored checkpoints to `1` (`save_total_limit`). This ensured continuity during interruptions without excessive disk usage.
+
+5. **Quantization**:
+   - Used 4-bit quantization during inference, significantly reducing memory and computational requirements while retaining model performance.
 
 **Data-Centric Approach**:
 - **Data Sources**: Augmented the FineTome dataset with travel-related datasets to improve domain-specific performance.
