@@ -56,6 +56,7 @@ The model-centric improvements focused on optimizing the fine-tuning process, en
 
 5. **Quantization**:
    - Used 4-bit quantization during inference, significantly reducing memory and computational requirements while retaining model performance.
+   - 4-bit quantization is a technique used to reduce the precision of the weights and activations of a neural network from the standard 32-bit floating point to just 4 bits. This drastically reduces the memory footprint and computational requirements during inference which enables the deployment of large language models on resource-constrained hardware like CPUs. Despite the reduction in precision, advanced quantization techniques retain most of the model's performance, ensuring high-quality outputs with significantly improved efficiency.
 
 **Data-Centric Approach**:
 - **Data Sources**: Augmented the FineTome dataset with travel-related datasets to improve domain-specific performance.
@@ -106,8 +107,6 @@ As part of the model-centric approach, we evaluated various open-source foundati
    - The model showed strong performance across a wide range of travel preferences, including historical landmarks, nightlife, and culinary experiences.
 
 By carefully testing these models, we ensured that the chosen LLM aligns with our application’s goals and provides an optimal user experience in the AI Travel Planner.
-
----
 
 ---
 
