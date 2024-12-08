@@ -44,42 +44,10 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
 
 ---
 
-## Quantization and LoRA Details
-
-### Quantization
-- Applied 4-bit quantization to reduce memory usage without significant loss in accuracy.
-
-### LoRA Parameters
-- **lora_alpha**: Adjusted to control the influence of LoRA updates on the model.
-- **lora_dropout**: Used to prevent overfitting during fine-tuning.
-- **rank stabilized LoRA (RS-LoRA)**: Ensured robust low-rank adaptation across layers.
-
----
-
-## Training Hyperparameters
-- **gradient_accumulation_steps**: Improved memory utilization by accumulating gradients over multiple steps.
-- **warmup_steps**: Gradual learning rate increase for stable optimization.
-- **max_steps** and **num_train_epochs**: Set based on dataset size and training time constraints.
-- **learning_rate**: Tuned for balanced convergence.
-- **fp16** and **bf16**: Mixed-precision training for efficiency.
-- **output_dir**: Saved checkpoints locally and synced with Google Drive.
-
----
-
 ## Deployment and Inference
 - **Colab**: Used Google Colab with T4 GPU for fine-tuning, saving checkpoints to Google Drive.
 - **HuggingFace Spaces**: Deployed a Gradio-based UI for inference, enabling interaction with the fine-tuned LLM.
 - **Gradio UI**: Offers an intuitive interface for querying the model and generating travel plans.
-
----
-
-## Project Justification
-
-### Why Use This Model?
-- Chose `unsloth/Llama-3.2-3B-Instruct-bnb-4bit` due to its balance of performance and computational efficiency.
-
-### Inference in Colab
-- Due to CPU-only limitations on HuggingFace Spaces, inference and demonstrations are done in Colab using a GPU.
 
 ---
 
