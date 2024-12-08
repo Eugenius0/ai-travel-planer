@@ -28,33 +28,55 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
 
 #### **(a) Model-Centric Approach**
 
-The model-centric improvements focused on optimizing the fine-tuning process, enhancing memory efficiency, and maximizing the performance of the fine-tuned model. Below are the strategies and configurations implemented:
+The fine-tuning process was carefully optimized by experimenting with key hyperparameters to balance performance, memory efficiency, and training stability. Below, we highlight the most critical hyperparameters, their tuned values, and the trade-offs associated with higher or lower values:
 
-1. **Hyperparameter Tuning**:
-   - **Batch Size and Gradient Accumulation**:
-     - Set `per_device_train_batch_size` to 2 to manage memory constraints of the NVIDIA T4 GPU while effectively simulating a batch size of 8 using `gradient_accumulation_steps` set to 4. This balances memory utilization with training stability.
-   - **Learning Rate**:
-     - Chose a learning rate of `2e-4`, identified through experimentation to ensure optimal convergence without overfitting.
-   - **Warmup Steps**:
-     - Used `warmup_steps` (5) to gradually ramp up the learning rate during the initial training phase, mitigating potential instability from large gradients.
-   - **Epochs and Steps**:
-     - Trained for `1` epoch and capped the total number of steps at `60` to fit within the constraints of our hardware while achieving meaningful performance.
+1. **Batch Size and Gradient Accumulation**:
+   - **Tuned Values**: `per_device_train_batch_size=2` and `gradient_accumulation_steps=4`.
+   - **Effect**: With a batch size of 2, we managed the memory constraints of the NVIDIA T4 GPU. By combining this with gradient accumulation steps of 4, we simulated an effective batch size of 8, improving training stability while staying within hardware limits.
+   - **Trade-Offs**:
+     - Higher batch size improves convergence and training speed but significantly increases GPU memory requirements.
+     - Lower batch size might lead to noisier gradient updates and slower convergence.
 
-2. **Optimization Techniques**:
-   - **Memory-Efficient Optimizer**:
-     - Utilized the `adamw_8bit` optimizer, which uses 8-bit precision for memory-intensive operations, enabling fine-tuning of large models on GPUs with limited memory.
-   - **Precision Settings**:
-     - Leveraged mixed precision (`fp16` or `bf16`) to reduce memory usage and accelerate computations without compromising model accuracy.
-   - **Regularization**:
-     - Applied `weight_decay` (0.01) to reduce overfitting by penalizing large weights, encouraging generalization.
+2. **Learning Rate**:
+   - **Tuned Value**: `2e-4`.
+   - **Effect**: This learning rate was chosen through experimentation to strike a balance between fast convergence and model stability.
+   - **Trade-Offs**:
+     - Higher learning rates risk divergence or overshooting the optimal weights.
+     - Lower learning rates slow convergence, potentially requiring more training time.
 
-3. **Fine-Tuning Framework**:
+3. **Warmup Steps**:
+   - **Tuned Value**: `warmup_steps=5`.
+   - **Effect**: Gradually increasing the learning rate in the initial steps stabilized training by preventing large gradients from disrupting early progress.
+   - **Trade-Offs**:
+     - Higher warmup steps ensure smoother initialization but delay full utilization of the optimal learning rate.
+     - Fewer warmup steps might lead to instability in early training phases.
+
+4. **Epochs and Training Steps**:
+   - **Tuned Values**: `num_train_epochs=1`, `max_steps=60`.
+   - **Effect**: Limited epochs and steps allowed us to adapt the model within the constraints of our hardware while achieving meaningful performance improvements.
+   - **Trade-Offs**:
+     - Increasing epochs or steps typically results in better generalization but requires more computational resources.
+     - Fewer steps reduce training time but may limit the model’s ability to converge effectively.
+
+5. **Memory-Efficient Optimization**:
+   - **Optimizer**: `adamw_8bit`.
+     - **Effect**: This optimizer utilizes 8-bit precision for memory-intensive operations, significantly reducing memory usage while retaining computational efficiency.
+   - **Precision Settings**: Mixed precision (`fp16` or `bf16` depending on hardware support).
+     - **Effect**: Reduced memory consumption and accelerated computations without compromising model accuracy.
+
+6. **Regularization**:
+   - **Weight Decay**: `weight_decay=0.01`.
+   - **Effect**: Penalized large weight values, promoting generalization and reducing the risk of overfitting.
+
+By carefully tuning these parameters, we improved the model's performance and efficiency within the constraints of the available hardware. Each choice was Each choice was made based on careful experimentation and consideration of trade-offs, ensuring that our approach remained both practical and effective.
+
+7. **Fine-Tuning Framework**:
    - Used the **Unsloth framework** combined with HuggingFace’s `SFTTrainer` to streamline supervised fine-tuning. This framework is optimized for efficiency and flexibility.
 
-4. **Efficient Checkpointing**:
+8. **Efficient Checkpointing**:
    - Saved progress periodically using `save_steps` (15) and limited stored checkpoints to `1` (`save_total_limit`). This ensured continuity during interruptions without excessive disk usage.
 
-5. **Quantization**:
+9. **Quantization**:
    - Used 4-bit quantization during inference, significantly reducing memory and computational requirements while retaining model performance.
    - 4-bit quantization is a technique used to reduce the precision of the weights and activations of a neural network from the standard 32-bit floating point to just 4 bits. This drastically reduces the memory footprint and computational requirements during inference which enables the deployment of large language models on resource-constrained hardware like CPUs. Despite the reduction in precision, advanced quantization techniques retain most of the model's performance, ensuring high-quality outputs with significantly improved efficiency.
 
