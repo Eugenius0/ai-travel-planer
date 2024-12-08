@@ -7,9 +7,30 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
 ---
 
 ## Features
-1. **Fine-Tuned LLM**:
-   - The model, fine-tuned using *Low-Rank Adaptation (LoRA)*, enables efficient memory usage while maintaining performance.
-   - Fine-tuning focused on task-specific datasets to ensure relevant travel recommendations.
+### 1. Fine-Tuned LLM: Harnessing LoRA for Efficient Adaptation
+
+#### Parameter-Efficient Fine-Tuning with LoRA
+
+To fine-tune our large language model, we employed **Low-Rank Adaptation (LoRA)**, a parameter-efficient fine-tuning (PEFT) technique. LoRA allows fine-tuning by adding low-rank matrices to certain layers of the model, reducing computational requirements while maintaining strong performance. This technique is especially advantageous for training large models on resource-constrained hardware.
+
+- **Advantages of LoRA**:
+  - Reduces the number of trainable parameters, making training faster and more memory-efficient.
+  - Mitigates common fine-tuning challenges:
+    - **Model Collapse**: Avoids narrowing the diversity of generated responses.
+    - **Catastrophic Forgetting**: Retains the model's general knowledge while adapting to new tasks.
+
+#### Fine-Tuning on Limited GPU Resources
+
+Fine-tuning was conducted on a **NVIDIA T4 GPU** in Google Colab, which has 16GB of memory. Key strategies included:
+
+1. **Layer-Specific Adaptations**: LoRA adapters were applied to specific model layers, focusing on improving attention and representation capabilities.
+2. **Hyperparameter Optimization**:
+   - **Gradient Accumulation Steps**: Enabled memory-efficient training by splitting updates over multiple batches.
+   - **Warmup Steps and Learning Rate Schedulers**: Carefully adjusted to improve convergence.
+   - **AdamW Optimizer with 8-bit Precision**: Reduced memory overhead during optimization.
+3. **Checkpointing**: Regular checkpoints were saved to Google Drive to safeguard progress, particularly for longer runs.
+
+These techniques ensured efficient fine-tuning while adhering to the memory constraints of the T4 GPU.
 
 2. **Interactive UI**:
    - A Gradio interface enables users to input their desired city and travel preferences to generate tailored travel plans.
