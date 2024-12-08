@@ -2,18 +2,16 @@
 
 ## Project Overview
 
-This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-tune a large language model (LLM) and demonstrate its capabilities through an innovative application. The application, *AI Travel Planner*, is a Gradio-based interface that generates personalized travel itineraries based on user input. The fine-tuned LLM enables detailed and relevant recommendations, showcasing its utility in the travel domain.
+This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-tune a large language model (LLM) by using Parameter Efficient Fine Tuning (PEFT) with Low-Rank Adaptation (LoRA) and demonstrate its capabilities through an innovative application. The application, *AI Travel Planner*, is a Gradio-based interface that generates personalized travel itineraries based on user input. The fine-tuned LLM enables detailed and relevant recommendations, showcasing its utility in the travel domain.
 
 ---
 
 ## Features
 1. **Fine-Tuned LLM**:
-   - The model, fine-tuned using *Low-Rank Adaptation (LoRA)*, enables efficient memory usage while maintaining performance.
-   - Fine-tuning focused on task-specific datasets to ensure relevant travel recommendations.
+   - The model, fine-tuned using PEFT with LoRA, enables efficient memory usage while maintaining performance.
 
 2. **Interactive UI**:
    - A Gradio interface enables users to input their desired city and travel preferences to generate tailored travel plans.
-   - Examples provided for ease of use.
 
 3. **Efficiency Optimizations**:
    - The model leverages 4-bit quantization for reduced computational overhead.
