@@ -1,4 +1,4 @@
-# AI Travel Planner Project
+# AI Travel Planner Project - Parameter Efficient Fine-Tunning (PEFT) with Low-Rank Adaptation (LoRA)
 
 ## Project Overview
 
