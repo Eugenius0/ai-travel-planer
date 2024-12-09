@@ -75,6 +75,7 @@ By carefully tuning these parameters, we improved the model's performance and ef
 
 8. **Efficient Checkpointing**:
    Saved progress periodically to Google drive using `save_steps` (15) and limited stored checkpoints to `1` (`save_total_limit`). This ensured continuity during interruptions without excessive disk usage.
+   
    ![image](https://github.com/user-attachments/assets/0b9081b0-854f-4ba5-821f-d55a0d76c173)
    ![image](https://github.com/user-attachments/assets/67f58780-0340-4204-96b5-b32aae87181a)
    ![image](https://github.com/user-attachments/assets/fcbd2e8f-d934-4c55-b73f-95f379d23140)
