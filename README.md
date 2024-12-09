@@ -12,15 +12,18 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
   
 2. **Instruction Dataset**:
    - Used the [FineTome-100k dataset](https://huggingface.co/datasets/mlabonne/FineTome-100k) to train the model. This dataset provides a diverse and high-quality set of instructions for fine-tuning large language models.
+  
+3. **Checkpointing for Efficiency**:
+   - Regular checkpoints were saved to Google Drive. This ensured progress continuity during interruptions. More details on checkpointing can be found in the [Model-Centric Approach](#model-centric-approach).
 
-3. **Interactive UI**:
+4. **Interactive UI**:
    - A Gradio interface enables users to input their desired city and travel preferences to generate tailored travel plans.
 
-4. **Efficiency Optimizations**:
+5. **Efficiency Optimizations**:
    - The model leverages 4-bit quantization for reduced computational overhead.
    - Checkpointing and memory-efficient techniques were implemented to enable training on a single GPU.
 
-5. **Deployment**:
+6. **Deployment**:
    - The fine-tuned large language model has been saved to HuggingFace and is publicly accessible there. The Travel Planner UI has been developed using Gradio and deployed through Google Colab to generate a temporary link.
 
 ---
