@@ -14,7 +14,7 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
    - Used the [FineTome-100k dataset](https://huggingface.co/datasets/mlabonne/FineTome-100k) to train the model. This dataset provides a diverse and high-quality set of instructions for fine-tuning large language models.
   
 3. **Checkpointing for Efficiency**:
-   - Regular checkpoints were saved to Google Drive. This ensured progress continuity during interruptions. More details on checkpointing can be found in the [Efficient Checkpointing](#efficient-checkpointing) section under the Model-Centric Approach.
+   - Regular checkpoints were saved to Google Drive. This ensured progress continuity during interruptions. More details on checkpointing can be found in the [Efficient Checkpointing link](#efficient-checkpointing) section under the Model-Centric Approach.
 
 4. **Interactive UI**:
    - A Gradio interface enables users to input their desired city and travel preferences to generate tailored travel plans.
