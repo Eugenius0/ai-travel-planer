@@ -68,7 +68,7 @@ The fine-tuning process was carefully optimized by experimenting with key hyperp
    - **Weight Decay**: `weight_decay=0.01`.
    - **Effect**: Penalized large weight values, promoting generalization and reducing the risk of overfitting.
 
-By carefully tuning these parameters, we improved the model's performance and efficiency within the constraints of the available hardware. Each choice was Each choice was made based on careful experimentation and consideration of trade-offs, ensuring that our approach remained both practical and effective.
+By carefully tuning these parameters, we improved the model's performance and efficiency within the constraints of the available hardware. Each choice was made based on careful experimentation and consideration of trade-offs, ensuring that our approach remained both practical and effective.
 
 7. **Fine-Tuning Framework**:
    - Used the **Unsloth framework** combined with HuggingFace’s `SFTTrainer` to streamline supervised fine-tuning. This framework is optimized for efficiency and flexibility.
