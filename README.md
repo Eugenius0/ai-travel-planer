@@ -83,6 +83,8 @@ By carefully tuning these parameters, we improved the model's performance and ef
    Ensured that the training can restart from where we left off:
    
    <img width="219" alt="image" src="https://github.com/user-attachments/assets/9ffe548a-b8a2-446f-8aea-24dfe99d15c2">
+   <img width="223" alt="image" src="https://github.com/user-attachments/assets/8777840a-643c-4a54-93af-75d197e6534f">
+
 
 
 
