@@ -78,12 +78,14 @@ By carefully tuning these parameters, we improved the model's performance and ef
    ![image](https://github.com/user-attachments/assets/0b9081b0-854f-4ba5-821f-d55a0d76c173)
    ![image](https://github.com/user-attachments/assets/67f58780-0340-4204-96b5-b32aae87181a)
    ![image](https://github.com/user-attachments/assets/fcbd2e8f-d934-4c55-b73f-95f379d23140)
+
    Ensured that the training can restart from where we left off:
+   
    ![image](https://github.com/user-attachments/assets/b55b396a-bd3c-4538-b1cd-d5e9b033e0f8)
 
 
 
-9. **Quantization**:
+10. **Quantization**:
    - Used 4-bit quantization during inference, significantly reducing memory and computational requirements while retaining model performance.
    - 4-bit quantization is a technique used to reduce the precision of the weights and activations of a neural network from the standard 32-bit floating point to just 4 bits. This drastically reduces the memory footprint and computational requirements during inference which enables the deployment of large language models on resource-constrained hardware like CPUs. Despite the reduction in precision, advanced quantization techniques retain most of the model's performance, ensuring high-quality outputs with significantly improved efficiency.
 
