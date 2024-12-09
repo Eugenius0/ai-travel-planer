@@ -9,15 +9,18 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
 ## Features
 1. **Fine-Tuned LLM**:
    - The model, fine-tuned using PEFT with LoRA, enables efficient memory usage while maintaining performance.
+  
+2. **Instruction Dataset**:
+   - Used the [FineTome-100k dataset](https://huggingface.co/datasets/mlabonne/FineTome-100k) to train the model. This dataset provides a diverse and high-quality set of instructions for fine-tuning large language models.
 
-2. **Interactive UI**:
+3. **Interactive UI**:
    - A Gradio interface enables users to input their desired city and travel preferences to generate tailored travel plans.
 
-3. **Efficiency Optimizations**:
+4. **Efficiency Optimizations**:
    - The model leverages 4-bit quantization for reduced computational overhead.
    - Checkpointing and memory-efficient techniques were implemented to enable training on a single GPU.
 
-4. **Deployment**:
+5. **Deployment**:
    - The fine-tuned large language model has been saved to HuggingFace and is publicly accessible there. The Travel Planner UI has been developed using Gradio and deployed through Google Colab to generate a temporary link.
 
 ---
@@ -94,14 +97,11 @@ By carefully tuning these parameters, we improved the model's performance and ef
 
 
 
-
-
-
-10. **Quantization**:
+9. **Quantization**:
    - Used 4-bit quantization during inference, significantly reducing memory and computational requirements while retaining model performance.
    - 4-bit quantization is a technique used to reduce the precision of the weights and activations of a neural network from the standard 32-bit floating point to just 4 bits. This drastically reduces the memory footprint and computational requirements during inference which enables the deployment of large language models on resource-constrained hardware like CPUs. Despite the reduction in precision, advanced quantization techniques retain most of the model's performance, ensuring high-quality outputs with significantly improved efficiency.
 
-**Data-Centric Approach**:
+** (b) Data-Centric Approach**:
 - **Data Sources**: Augmented the FineTome dataset with travel-related datasets to improve domain-specific performance.
 - **Data Preprocessing**: Applied techniques like text normalization and deduplication to enhance data quality.
 
