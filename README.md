@@ -74,10 +74,13 @@ By carefully tuning these parameters, we improved the model's performance and ef
    - Used the **Unsloth framework** combined with HuggingFace’s `SFTTrainer` to streamline supervised fine-tuning. This framework is optimized for efficiency and flexibility.
 
 8. **Efficient Checkpointing**:
-   - Saved progress periodically to Google drive using `save_steps` (15) and limited stored checkpoints to `1` (`save_total_limit`). This ensured continuity during interruptions without excessive disk usage.
-   - ![image](https://github.com/user-attachments/assets/0b9081b0-854f-4ba5-821f-d55a0d76c173)
-   - ![image](https://github.com/user-attachments/assets/67f58780-0340-4204-96b5-b32aae87181a)
-   - ![image](https://github.com/user-attachments/assets/fcbd2e8f-d934-4c55-b73f-95f379d23140)
+   Saved progress periodically to Google drive using `save_steps` (15) and limited stored checkpoints to `1` (`save_total_limit`). This ensured continuity during interruptions without excessive disk usage.
+   ![image](https://github.com/user-attachments/assets/0b9081b0-854f-4ba5-821f-d55a0d76c173)
+   ![image](https://github.com/user-attachments/assets/67f58780-0340-4204-96b5-b32aae87181a)
+   ![image](https://github.com/user-attachments/assets/fcbd2e8f-d934-4c55-b73f-95f379d23140)
+   Ensured that the training can restart from where we left off:
+   ![image](https://github.com/user-attachments/assets/b55b396a-bd3c-4538-b1cd-d5e9b033e0f8)
+
 
 
 9. **Quantization**:
