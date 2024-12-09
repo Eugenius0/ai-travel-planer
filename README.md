@@ -104,9 +104,31 @@ By carefully tuning these parameters, we improved the model's performance and ef
    - Used 4-bit quantization during inference, significantly reducing memory and computational requirements while retaining model performance.
    - 4-bit quantization is a technique used to reduce the precision of the weights and activations of a neural network from the standard 32-bit floating point to just 4 bits. This drastically reduces the memory footprint and computational requirements during inference which enables the deployment of large language models on resource-constrained hardware like CPUs. Despite the reduction in precision, advanced quantization techniques retain most of the model's performance, ensuring high-quality outputs with significantly improved efficiency.
 
-** (b) Data-Centric Approach**:
-- **Data Sources**: Augmented the FineTome dataset with travel-related datasets to improve domain-specific performance.
-- **Data Preprocessing**: Applied techniques like text normalization and deduplication to enhance data quality.
+**(b) Data-Centric Approach**:
+
+To improve the performance of our fine-tuned LLM, we focused on enhancing the quality and diversity of the instruction dataset. This approach ensures the model can generate accurate and context-aware travel recommendations.
+
+1. **Using a Larger Dataset** (future work, not implemented due to computational and memory limits and to respect the given time constraints.):
+   - Transition from the [FineTome-100k](https://huggingface.co/datasets/mlabonne/FineTome-100k) dataset (subset of arcee-ai/The-Tome) to the larger [The Tome dataset](https://huggingface.co/datasets/arcee-ai/The-Tome) dataset, providing a richer set of instructions for training.
+   - The expanded dataset covers a broader range of scenarios, enhancing the model's ability to handle diverse contexts accurately.
+
+2. **Custom Prompt Engineering** (implemented):
+   - Designed custom prompts to clearly define the model’s expected behavior.
+   - **Example Prompt**:
+     - f"Create a travel plan to visit {city} during {nb_days} days, focusing on {preferences}. Include suggested activities, "
+            f"landmarks to visit, and any local tips."
+
+3. **Integrating Additional Data Sources** (future work, not implemented due to computational and memory limits and to respect the given time constraints.):
+   - Augment the dataset with:
+     - **Travel Reviews**: User feedback from platforms like [TripAdvisor](https://www.kaggle.com/datasets/andrewmvd/trip-advisor-hotel-reviews).
+
+4. **Benefits**:
+   - Increased generalization across diverse user inputs.
+   - Improved alignment with specific travel-related tasks and queries.
+
+5. **Challenges and Solutions**:
+   - Larger datasets required careful tuning of hyperparameters like learning rate and batch size to ensure stable training.
+   - Regular checkpointing addressed the risk of data or progress loss during extended training sessions.
 
 ### 2. Evaluating Multiple LLMs
 
