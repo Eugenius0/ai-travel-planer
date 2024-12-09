@@ -77,7 +77,7 @@ By carefully tuning these parameters, we improved the model's performance and ef
    Saved progress periodically to Google drive using `save_steps` (15) and limited stored checkpoints to `1` (`save_total_limit`). This ensured continuity during interruptions without excessive disk usage.
    
    ![image](https://github.com/user-attachments/assets/0b9081b0-854f-4ba5-821f-d55a0d76c173)
-   ![image](https://github.com/user-attachments/assets/67f58780-0340-4204-96b5-b32aae87181a)
+   <img width="924" alt="image" src="https://github.com/user-attachments/assets/16fc0395-1ef0-41e4-96d4-130418a46c96">
    ![image](https://github.com/user-attachments/assets/fcbd2e8f-d934-4c55-b73f-95f379d23140)
 
    Ensured that the training can restart from where we left off:
