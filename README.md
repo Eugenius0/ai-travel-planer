@@ -76,6 +76,10 @@ By carefully tuning these parameters, we improved the model's performance and ef
 7. **Fine-Tuning Framework**:
    - Used the **Unsloth framework** combined with HuggingFace’s `SFTTrainer` to streamline supervised fine-tuning. This framework is optimized for efficiency and flexibility.
 
+**Code Overview**:  
+![image](https://github.com/user-attachments/assets/cc8f4c14-71ab-4f15-9df7-a3bc1ea6ba68)
+
+
 8. **Efficient Checkpointing**:
    Saved progress periodically to Google drive using `save_steps` (15) and limited stored checkpoints to `1` (`save_total_limit`). This ensured continuity during interruptions without excessive disk usage.
    
