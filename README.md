@@ -77,7 +77,7 @@ By carefully tuning these parameters, we improved the model's performance and ef
    - Used the **Unsloth framework** combined with HuggingFace’s `SFTTrainer` to streamline supervised fine-tuning. This framework is optimized for efficiency and flexibility.
 
 **Code Overview**:  
-![image](https://github.com/user-attachments/assets/cc8f4c14-71ab-4f15-9df7-a3bc1ea6ba68)
+![image](https://github.com/user-attachments/assets/cefa10ac-b2a8-4ad3-908e-c147a2e86b9c)
 
 
 8. **Efficient Checkpointing**:
