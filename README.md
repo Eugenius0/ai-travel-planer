@@ -8,7 +8,7 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
 
 ## Features
 1. **Fine-Tuned LLM**:
-   - The model, fine-tuned using PEFT with LoRA, enables efficient memory usage while maintaining performance.
+   - The model, fine-tuned using PEFT with LoRA, enables efficient memory usage while maintaining performance. The fine-tuning process included careful hyperparameter optimization to balance performance, memory efficiency, and training stability, as described in the [Model-Centric Approach](#model-centric-approach) section.
   
 2. **Instruction Dataset**:
    - Used the [FineTome-100k dataset](https://huggingface.co/datasets/mlabonne/FineTome-100k) to train the model. This dataset provides a diverse and high-quality set of instructions for fine-tuning large language models.
