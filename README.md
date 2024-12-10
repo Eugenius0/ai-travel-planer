@@ -295,6 +295,7 @@ Day two:
 - Integrate new datasets to further refine model outputs.
 - Longer training to increase performance of LLM.
 - Optimize the UI.
+- Deploy LLM user interface on a public domain with a permanent link.
 - Explore additional domains beyond travel planning.
 
 ---
