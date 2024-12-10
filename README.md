@@ -191,11 +191,11 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 
 ### **Outcome of Results**
 
-- **Improved Inference Time**: After tuning hyperparameters, the model's inference time significantly decreased, demonstrating enhanced computational efficiency without compromising the quality of responses.
+- **Improved Inference Time**: After tuning hyperparameters, the model's inference time significantly decreased, making it more efficient and suitable for practical applications, especially translation tasks.
 
-- **Trade-off in BLEU Scores**: While BLEU scores slightly decreased after tuning, this indicates a trade-off where faster response generation led to minor deviations in text overlap with reference outputs.
+- **Enhanced BLEU Scores**: BLEU scores improved after tuning, reflecting better alignment between the model's generated translations and the expected reference translations.
 
-- **Enhanced Usability**: The fine-tuned model provides detailed and coherent outputs more quickly, making it more practical for real-time applications like the AI Travel Planner.
+- **Better Translation Quality**: The fine-tuned model demonstrated improved coherence and accuracy in generating translations, as shown by higher BLEU scores and more realistic outputs for both German and French translations.
 
 
 ### 2. Evaluating Multiple LLMs
