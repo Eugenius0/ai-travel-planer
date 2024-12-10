@@ -129,6 +129,38 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 5. **Challenges and Solutions**:
    - Larger datasets required careful tuning of hyperparameters like learning rate and batch size to ensure stable training.
    - Regular checkpointing addressed the risk of data or progress loss during extended training sessions.
+  
+
+
+
+
+## **Measure Performance to show results of improvement**
+
+### Before Tuning Hyperparameters:
+
+| **Query**                                              | **Generated Output**                                         | **Inference Time (s)** |
+|--------------------------------------------------------|-------------------------------------------------------------|------------------------|
+| "In which state is Freiburg im Breisgau and name its most famous sight?" | "The most famous sight in Freiburg im Breisgau, located in Baden-Württemberg..." | 5.32                   |
+| "What are the main attractions in Paris?"              | "Paris, the City of Light, is known for its beautiful Eiffel Tower, Louvre Museum..." | 4.69                   |
+
+---
+
+### Explanation of Each Row:
+
+1. **Row 1**: The model was asked about Freiburg im Breisgau. It generated a response detailing its location and a famous sight in approximately 5.32 seconds.
+2. **Row 2**: The model was queried about Paris's main attractions, responding with key landmarks in about 4.69 seconds.
+
+This table provides a summary of the model's performance and the responses generated for the test queries.
+
+![image](https://github.com/user-attachments/assets/cd87ac57-5b62-471b-bbbc-812032f356cd)
+
+
+
+
+
+
+
+
 
 ### 2. Evaluating Multiple LLMs
 
