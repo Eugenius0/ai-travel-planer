@@ -17,7 +17,7 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
    - Regular checkpoints were saved to Google Drive. This ensured progress continuity during interruptions. More details on checkpointing can be found in the [Efficient Checkpointing](#efficient-checkpointing) section under the Model-Centric Approach.
 
 4. **Interactive UI**:
-   - A Gradio interface enables users to input their desired city and travel preferences to generate tailored travel plans.
+   - A Gradio interface enables users to input their desired city and travel preferences to generate tailored travel plans. [Gradio UI](#gradio-ui)
 
 5. **Efficiency Optimizations**:
    - The model leverages 4-bit quantization for reduced computational overhead.
@@ -245,7 +245,10 @@ By carefully testing these models, we ensured that the chosen LLM aligns with ou
 ## Deployment and Inference
 - **Colab**: Used Google Colab with T4 GPU for fine-tuning, saving checkpoints to Google Drive.
 - **HuggingFace Spaces**: Deployed a Gradio-based UI for inference, enabling interaction with the fine-tuned LLM.
-- **Gradio UI**: Offers an intuitive interface for querying the model and generating travel plans.
+- #### **Gradio UI**: Offers an intuitive interface for querying the model and generating travel plans.
+
+![image](https://github.com/user-attachments/assets/43b30230-5acd-42dd-94fd-2988a526cc0f)
+
 
 ---
 
