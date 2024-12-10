@@ -153,16 +153,6 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 
 **BLEU (Bilingual Evaluation Understudy)** is a metric used to evaluate the quality of machine-generated text by comparing it to one or more reference texts. It measures the overlap of n-grams (sequences of words) between the generated and reference texts, with higher scores indicating closer similarity and better quality.
 
-| **Query**                                              | **Generated Output**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | **BLEU Score** |
-|--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
-| "In which state is Freiburg im Breisgau and name its most famous sight?" | "Freiburg im Breisgau is in the state of Baden-Württemberg, Germany.\n\nOne of its most famous sights is the Freiburg Minster (Friedenskirche)."                                                                                                                                                                                                                                                                                                                                                     | 0.0708         |
-| "What are the main attractions in Paris?"              | "Paris, the capital of France, is a popular destination for tourists due to its rich history, beautiful architecture, art museums, and lively culture. Some of the main attractions in Paris include:\n\n1. The Eiffel Tower: This iron lattice tower built in 1889 stands 324 meters tall and is one of the most iconic landmarks of Paris.\n2. The Louvre: The Louvre Museum is home to the Mona Lisa, a famous painting created by Leonardo da Vinci in the 15th century.\n3. The Notre-Dame Cathedral: The Cathedral was built in the 12th century and has been the place of worship" | 0.0676         |
-
-
-![image](https://github.com/user-attachments/assets/51222f41-835d-4d00-a655-e1fab9b75bec)
-
-
-
 
 | **Query**                                                                                                      | **Expected Output**                                                                                                              | **Generated Output**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | **BLEU Score** |
 |---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
@@ -172,6 +162,7 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 
 
 ![image](https://github.com/user-attachments/assets/95750492-76ce-4c6d-a551-da2fdad804f1)
+
 
 
 ## After Tuning Hyperparameters:
@@ -185,6 +176,9 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 ![image](https://github.com/user-attachments/assets/ee5f1b1e-850d-46a0-b51d-92f905a2b2d8)
 
 
+## Bleu Score
+
+**BLEU (Bilingual Evaluation Understudy)** is a metric used to evaluate the quality of machine-generated text by comparing it to one or more reference texts. It measures the overlap of n-grams (sequences of words) between the generated and reference texts, with higher scores indicating closer similarity and better quality.
 
 | **Query**                                                                                                      | **Expected Output**                                                                                                              | **Generated Output**                                                                                                       | **BLEU Score** |
 |---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------|
@@ -193,19 +187,6 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 
 
 ![image](https://github.com/user-attachments/assets/9970e447-b729-483c-b94d-34c60a429453)
-
-
-## Bleu Score
-
-**BLEU (Bilingual Evaluation Understudy)** is a metric used to evaluate the quality of machine-generated text by comparing it to one or more reference texts. It measures the overlap of n-grams (sequences of words) between the generated and reference texts, with higher scores indicating closer similarity and better quality.
-
-| **Query**                                              | **Generated Output**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **BLEU Score** |
-|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
-| "In which state is Freiburg im Breisgau and name its most famous sight?" | "Freiburg im Breisgau is a city in the state of Baden-Württemberg, Germany. It is known as a culturally significant location with a rich history dating back to the 18th century. Freiburg im Breisgau is often referred to as the city of the most beautiful house. The city is situated near the Breisgaau River and the Albtraiteh Hills. It is particularly famous for the Black Forest and the city's connection to the German composer Friedrich Nietzsche." | 0.1184         |
-| "What are the main attractions in Paris?"              | "Paris, France, is a world-renowned city with a rich history and culture that offers numerous attractions for travelers. Here are some of the main attractions in Paris:\n\n1. The Eiffel Tower (Tour Eiffel): This iconic tower was constructed for the 1889 World's Fair and is one of the most recognizable landmarks in the world. Visitors can take the stairs or elevator to the top for stunning views of the city.\n\n2. The Louvre: This museum houses some of the world's most famous works of art, including Leonardo da Vinci's 'Mona Lisa.'\n\n3. The Seine River: Visitors can take scenic boat tours along this iconic river." | 0.2461         |
-
-
-![image](https://github.com/user-attachments/assets/c770728a-3f9f-4611-b5ed-f5c4b4b07c7e)
 
 
 ### **Outcome of Results**
