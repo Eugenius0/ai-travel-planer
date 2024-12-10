@@ -163,23 +163,6 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 
 
 
-### Based on Human Judgement:
-
-### Question 1
-**In which state is Freiburg im Breisgau and name its most famous sight?**
-
-**Output:**  
-Freiburg im Breisgau is located in the state of Baden-Württemberg in Germany.
-
-The most famous sight in Freiburg im Breisgau is the Münster, a 13th-century cathedral known for its remarkable architecture. The Münster is home to the famous Black Forest Woodcarver's Guild, and its most notable feature is the impressive clock tower.
-
-### Question 2
-**How high is the Feldberg in the Black Forest?**
-
-**Output:**  
-The Feldberg is the highest point of the Black Forest, with an elevation of 1,493 meters (4,893 ft) above sea level.
-
-
 
 ## After Tuning Hyperparameters:
 
@@ -204,19 +187,14 @@ The Feldberg is the highest point of the Black Forest, with an elevation of 1,49
 
 ![image](https://github.com/user-attachments/assets/33a67b0c-da78-48e5-bb34-058fe3388630)
 
-### Based on Human Judgement:
 
-### Question 1
-**In which state is Freiburg im Breisgau and name its most famous sight?**
+### **Outcome of Results**
 
-**Output:**  
-Fribourg, which is German for Freiburg, is a city in the German state of Baden-Württemberg. The most famous sight in Freiburg is the Minster of Freiburg, also known as the Freiburger Münster, a striking Gothic cathedral that dates back to the 14th century. The Minster stands 129.7 meters tall, making it the highest church tower in Europe and the tallest building in Freiburg. It's an iconic landmark in the city and attracts thousands of visitors every year.
+- **Improved Inference Time**: After tuning hyperparameters, the model's inference time significantly decreased, demonstrating enhanced computational efficiency without compromising the quality of responses.
 
-### Question 2
-**How high is the Feldberg in the Black Forest?**
+- **Trade-off in BLEU Scores**: While BLEU scores slightly decreased after tuning, this indicates a trade-off where faster response generation led to minor deviations in text overlap with reference outputs.
 
-**Output:**  
-The Feldberg, which is a mountain in the Black Forest (Schwarzwald) in Germany, has an elevation of 1,493 meters (4,893 feet).
+- **Enhanced Usability**: The fine-tuned model provides detailed and coherent outputs more quickly, making it more practical for real-time applications like the AI Travel Planner.
 
 
 ### 2. Evaluating Multiple LLMs
