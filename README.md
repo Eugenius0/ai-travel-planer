@@ -144,6 +144,7 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 | "In which state is Freiburg im Breisgau and name its most famous sight?" | "The most famous sight in Freiburg im Breisgau, located in Baden-Württemberg..." | 5.32                   |
 | "What are the main attractions in Paris?"              | "Paris, the City of Light, is known for its beautiful Eiffel Tower, Louvre Museum..." | 4.69                   |
 
+
 ---
 
 ### Explanation of Each Row:
@@ -154,6 +155,17 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 This table provides a summary of the model's performance and the responses generated for the test queries.
 
 ![image](https://github.com/user-attachments/assets/cd87ac57-5b62-471b-bbbc-812032f356cd)
+
+
+**BLEU (Bilingual Evaluation Understudy)** is a metric used to evaluate the quality of machine-generated text by comparing it to one or more reference texts. It measures the overlap of n-grams (sequences of words) between the generated and reference texts, with higher scores indicating closer similarity and better quality.
+
+| **Query**                                              | **Generated Output**                                         | **BLEU Score** |
+|--------------------------------------------------------|-------------------------------------------------------------|----------------|
+| "In which state is Freiburg im Breisgau and name its most famous sight?" | "Freiburg im Breisgau is in the state of Baden-Württemberg, and its most famous sight is the Freiburger Münster." | 0.2082         |
+| "What are the main attractions in Paris?"              | "The City of Light has plenty to offer. Here are some key attractions: Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral." | 0.0204         |
+
+![image](https://github.com/user-attachments/assets/a3788e5c-27cb-43bf-814c-a116a4bfa4f3)
+
 
 
 ### Based on Human Judgement:
@@ -193,6 +205,30 @@ This table provides a summary of the model's performance and the responses gener
 ![image](https://github.com/user-attachments/assets/cd87ac57-5b62-471b-bbbc-812032f356cd)
 
 
+**BLEU (Bilingual Evaluation Understudy)** is a metric used to evaluate the quality of machine-generated text by comparing it to one or more reference texts. It measures the overlap of n-grams (sequences of words) between the generated and reference texts, with higher scores indicating closer similarity and better quality.
+
+| **Query**                                              | **Generated Output**                                         | **BLEU Score** |
+|--------------------------------------------------------|-------------------------------------------------------------|----------------|
+| "In which state is Freiburg im Breisgau and name its most famous sight?" | "Freiburg im Breisgau is in the state of Baden-Württemberg, and its most famous sight is the Freiburger Münster." | 0.2082         |
+| "What are the main attractions in Paris?"              | "The City of Light has plenty to offer. Here are some key attractions: Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral." | 0.0204         |
+
+![image](https://github.com/user-attachments/assets/a3788e5c-27cb-43bf-814c-a116a4bfa4f3)
+
+### Based on Human Judgement:
+
+### Question 1
+**In which state is Freiburg im Breisgau and name its most famous sight?**
+
+**Output:**  
+Freiburg im Breisgau is located in the state of Baden-Württemberg in Germany.
+
+The most famous sight in Freiburg im Breisgau is the Münster, a 13th-century cathedral known for its remarkable architecture. The Münster is home to the famous Black Forest Woodcarver's Guild, and its most notable feature is the impressive clock tower.
+
+### Question 2
+**How high is the Feldberg in the Black Forest?**
+
+**Output:**  
+The Feldberg is the highest point of the Black Forest, with an elevation of 1,493 meters (4,893 ft) above sea level.
 
 
 ### 2. Evaluating Multiple LLMs
