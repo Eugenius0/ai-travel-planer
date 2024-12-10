@@ -285,6 +285,7 @@ Day two:
 - Evening: Dine at Septime, a critically acclaimed restaurant that serves seasonal French cuisine. Be sure to book well in advance due to limited availability.
 
 
+![image](https://github.com/user-attachments/assets/2a0156ed-769d-4e81-9884-e492e9448e2d)
 
 
 
