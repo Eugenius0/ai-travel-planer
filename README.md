@@ -15,13 +15,12 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
   
 3. **Checkpointing for Efficiency**:
    - Regular checkpoints were saved to Google Drive. This ensured progress continuity during interruptions. More details on checkpointing can be found in the [Efficient Checkpointing](#efficient-checkpointing) section under the Model-Centric Approach.
+  
+4. **Performance Measurement**:
+   - The model's performance was evaluated using metrics like inference time and BLEU scores, providing insights into the improvements made after hyperparameter tuning. Details of these evaluations can be found in the [Measure Performance](#measure-performance-to-show-results-of-improvement) section.
 
-4. **Interactive UI**:
+5. **Interactive UI**:
    - A Gradio interface [Gradio UI](#gradio-ui) enables users to input their desired city and travel preferences to generate tailored travel plans.
-
-5. **Efficiency Optimizations**:
-   - The model leverages 4-bit quantization for reduced computational overhead.
-   - Checkpointing and memory-efficient techniques were implemented to enable training on a single GPU.
 
 6. **Deployment**:
    - The fine-tuned large language model has been saved to [my HuggingFace account](https://huggingface.co/Eugenius0/lora_model_tuned) and is publicly accessible there. The Travel Planner UI has been developed using Gradio and deployed through Google Colab to generate a temporary link [AI Travel Planner](https://888fbed536d4fc2252.gradio.live/) which is valid for 72h. The reason for doing that instead of deploying it within a Huggingface Space is explained here [Issue #1](https://github.com/Eugenius0/ai-travel-planner/issues/1) in more detail.
