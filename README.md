@@ -175,6 +175,16 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 ![image](https://github.com/user-attachments/assets/ee5f1b1e-850d-46a0-b51d-92f905a2b2d8)
 
 
+
+| **Query**                                                                                                      | **Expected Output**                                                                                                              | **Generated Output**                                                                                                       | **BLEU Score** |
+|---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------|
+| Translate this from English into German: Freiburg is in Baden-Württemberg and its most famous sight is the Freiburger Münster. | Freiburg liegt in Baden-Württemberg und seine berühmteste Sehenswürdigkeit ist das Freiburger Münster.                           | Freiburg ist im Bundesland Baden-Württemberg und am bekanntesten ist das Freiburger Münster.                               | 0.2620         |
+| Translate this from English into French: The main attractions in Paris include the Eiffel Tower, the Louvre, and Notre-Dame Cathedral. | Les principales attractions de Paris incluent la Tour Eiffel, le Louvre et la Cathédrale Notre-Dame.                            | Les principaux attractions de Paris comprennent la Tour d'Eiffel, le Louvre, et la cathédrale Notre-Dame.                  | 0.4579         |
+
+
+![image](https://github.com/user-attachments/assets/9970e447-b729-483c-b94d-34c60a429453)
+
+
 ## Bleu Score
 
 **BLEU (Bilingual Evaluation Understudy)** is a metric used to evaluate the quality of machine-generated text by comparing it to one or more reference texts. It measures the overlap of n-grams (sequences of words) between the generated and reference texts, with higher scores indicating closer similarity and better quality.
