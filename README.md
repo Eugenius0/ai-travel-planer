@@ -137,36 +137,29 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 
 ## **Measure Performance to show results of improvement**
 
-### Before Tuning Hyperparameters:
+## Before Tuning Hyperparameters:
 
-| **Query**                                              | **Generated Output**                                         | **Inference Time (s)** |
-|--------------------------------------------------------|-------------------------------------------------------------|------------------------|
-| "In which state is Freiburg im Breisgau and name its most famous sight?" | "The most famous sight in Freiburg im Breisgau, located in Baden-Württemberg..." | 5.32                   |
-| "What are the main attractions in Paris?"              | "Paris, the City of Light, is known for its beautiful Eiffel Tower, Louvre Museum..." | 4.69                   |
+| **Query**                                              | **Generated Output**                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | **Inference Time (s)** |
+|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| "In which state is Freiburg im Breisgau and name its most famous sight?" | "The most famous sight in Freiburg im Breisgau, Germany, is the Münster church. The Freiburg Cathedral, or the Münster, is a beautiful Protestant cathedral that is one of the city's main landmarks. It dates back to 1218 and features impressive Romanesque and Gothic architectural elements, including two 43-meter-tall towers, known as the 'Lion' and the 'Dove.' The Münster is a popular tourist attraction in Freiburg and is known for its intricate stone carvings, stained glass windows, and historical significance." | 13.9443               |
+| "What are the main attractions in Paris?"              | "Paris is a city known for its beauty, history, art, and romance. There are countless things to do and see here, but some of the main attractions include:\n\n1. Eiffel Tower: This iron giant is one of Paris' most iconic landmarks and offers breathtaking views of the city.\n2. Louvre Museum: One of the largest museums in the world, housing a vast collection of artworks, including the Mona Lisa.\n3. Notre Dame Cathedral: A beautiful and historic church that was built in the 12th century.\n4. Arc de Triomphe: A monument celebrating French victories and featuring a stunning view of the city." | 7.4836                |
 
 
----
 
-### Explanation of Each Row:
-
-1. **Row 1**: The model was asked about Freiburg im Breisgau. It generated a response detailing its location and a famous sight in approximately 5.32 seconds.
-2. **Row 2**: The model was queried about Paris's main attractions, responding with key landmarks in about 4.69 seconds.
-
-This table provides a summary of the model's performance and the responses generated for the test queries.
-
-![image](https://github.com/user-attachments/assets/cd87ac57-5b62-471b-bbbc-812032f356cd)
+![image](https://github.com/user-attachments/assets/00586704-9e8c-4a65-90b6-a97880929852)
 
 
 ## Bleu Score
 
 **BLEU (Bilingual Evaluation Understudy)** is a metric used to evaluate the quality of machine-generated text by comparing it to one or more reference texts. It measures the overlap of n-grams (sequences of words) between the generated and reference texts, with higher scores indicating closer similarity and better quality.
 
-| **Query**                                              | **Generated Output**                                         | **BLEU Score** |
-|--------------------------------------------------------|-------------------------------------------------------------|----------------|
-| "In which state is Freiburg im Breisgau and name its most famous sight?" | "Freiburg im Breisgau is in the state of Baden-Württemberg, and its most famous sight is the Freiburger Münster." | 0.2082         |
-| "What are the main attractions in Paris?"              | "The City of Light has plenty to offer. Here are some key attractions: Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral." | 0.0204         |
+| **Query**                                              | **Generated Output**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | **BLEU Score** |
+|--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
+| "In which state is Freiburg im Breisgau and name its most famous sight?" | "Freiburg im Breisgau is in the state of Baden-Württemberg, Germany.\n\nOne of its most famous sights is the Freiburg Minster (Friedenskirche)."                                                                                                                                                                                                                                                                                                                                                     | 0.0708         |
+| "What are the main attractions in Paris?"              | "Paris, the capital of France, is a popular destination for tourists due to its rich history, beautiful architecture, art museums, and lively culture. Some of the main attractions in Paris include:\n\n1. The Eiffel Tower: This iron lattice tower built in 1889 stands 324 meters tall and is one of the most iconic landmarks of Paris.\n2. The Louvre: The Louvre Museum is home to the Mona Lisa, a famous painting created by Leonardo da Vinci in the 15th century.\n3. The Notre-Dame Cathedral: The Cathedral was built in the 12th century and has been the place of worship" | 0.0676         |
 
-![image](https://github.com/user-attachments/assets/a3788e5c-27cb-43bf-814c-a116a4bfa4f3)
+
+![image](https://github.com/user-attachments/assets/51222f41-835d-4d00-a655-e1fab9b75bec)
 
 
 
@@ -188,7 +181,7 @@ The Feldberg is the highest point of the Black Forest, with an elevation of 1,49
 
 
 
-### After Tuning Hyperparameters:
+## After Tuning Hyperparameters:
 
 | **Query**                                              | **Generated Output**                                         | **Inference Time (s)** |
 |--------------------------------------------------------|-------------------------------------------------------------|------------------------|
