@@ -155,18 +155,20 @@ This table provides a summary of the model's performance and the responses gener
 ![image](https://github.com/user-attachments/assets/cd87ac57-5b62-471b-bbbc-812032f356cd)
 
 
-Based on Human Judgement:
+### Based on Human Judgement:
 
-- In which state is Freiburg im Breisgau and name its most famous sight?.
+### Question 1
+**In which state is Freiburg im Breisgau and name its most famous sight?**
 
+**Output:**  
 Freiburg im Breisgau is located in the state of Baden-Württemberg in Germany.
 
-The most famous sight in Freiburg im Breisgau is the Münster. The Münster is a 13th-century church that houses the famous Black Forest Woodcarver's Guild. However, the most notable feature of the Münster is the impressive clock tower.
+The most famous sight in Freiburg im Breisgau is the Münster, a 13th-century cathedral known for its remarkable architecture. The Münster is home to the famous Black Forest Woodcarver's Guild, and its most notable feature is the impressive clock tower.
 
+### Question 2
+**How high is the Feldberg in the Black Forest?**
 
-
-- How high is the Feldberg in the Black Forest?
-
+**Output:**  
 The Feldberg is the highest point of the Black Forest, with an elevation of 1,493 meters (4,893 ft) above sea level.
 
 
