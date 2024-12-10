@@ -245,7 +245,7 @@ By carefully testing these models, we ensured that the chosen LLM aligns with ou
 ## Deployment and Inference
 - **Colab**: Used Google Colab with T4 GPU for fine-tuning, saving checkpoints to Google Drive.
 - **HuggingFace Spaces**: Deployed a Gradio-based UI for inference, enabling interaction with the fine-tuned LLM.
-- #### **Gradio UI**: Offers an intuitive interface for querying the model and generating travel plans.
+- #### **Gradio-UI**: Offers an intuitive interface for querying the model and generating travel plans.
 
 ![image](https://github.com/user-attachments/assets/43b30230-5acd-42dd-94fd-2988a526cc0f)
 
