@@ -155,9 +155,39 @@ This table provides a summary of the model's performance and the responses gener
 ![image](https://github.com/user-attachments/assets/cd87ac57-5b62-471b-bbbc-812032f356cd)
 
 
+Based on Human Judgement:
+
+- In which state is Freiburg im Breisgau and name its most famous sight?.
+
+Freiburg im Breisgau is located in the state of Baden-Württemberg in Germany.
+
+The most famous sight in Freiburg im Breisgau is the Münster. The Münster is a 13th-century church that houses the famous Black Forest Woodcarver's Guild. However, the most notable feature of the Münster is the impressive clock tower.
 
 
 
+- How high is the Feldberg in the Black Forest?
+
+The Feldberg is the highest point of the Black Forest, with an elevation of 1,493 meters (4,893 ft) above sea level.
+
+
+
+### After Tuning Hyperparameters:
+
+| **Query**                                              | **Generated Output**                                         | **Inference Time (s)** |
+|--------------------------------------------------------|-------------------------------------------------------------|------------------------|
+| "In which state is Freiburg im Breisgau and name its most famous sight?" | "The most famous sight in Freiburg im Breisgau, located in Baden-Württemberg..." | 5.32                   |
+| "What are the main attractions in Paris?"              | "Paris, the City of Light, is known for its beautiful Eiffel Tower, Louvre Museum..." | 4.69                   |
+
+---
+
+### Explanation of Each Row:
+
+1. **Row 1**: The model was asked about Freiburg im Breisgau. It generated a response detailing its location and a famous sight in approximately 5.32 seconds.
+2. **Row 2**: The model was queried about Paris's main attractions, responding with key landmarks in about 4.69 seconds.
+
+This table provides a summary of the model's performance and the responses generated for the test queries.
+
+![image](https://github.com/user-attachments/assets/cd87ac57-5b62-471b-bbbc-812032f356cd)
 
 
 
