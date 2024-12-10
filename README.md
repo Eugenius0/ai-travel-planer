@@ -24,7 +24,7 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
    - Checkpointing and memory-efficient techniques were implemented to enable training on a single GPU.
 
 6. **Deployment**:
-   - The fine-tuned large language model has been saved to HuggingFace and is publicly accessible there. The Travel Planner UI has been developed using Gradio and deployed through Google Colab to generate a temporary link.
+   - The fine-tuned large language model has been saved to [my HuggingFace](#https://huggingface.co/Eugenius0/lora_model) account and is publicly accessible there. The Travel Planner UI has been developed using Gradio and deployed through Google Colab to generate a temporary link.
 
 ---
 
