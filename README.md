@@ -31,7 +31,7 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
 
 ### 1. Performance Improvement Strategies
 
-**(a)** 
+### (a) 
 ### Model-Centric Approach
 
 The fine-tuning process was carefully optimized by experimenting with key hyperparameters to balance performance, memory efficiency, and training stability. Below, we highlight the most critical hyperparameters, their tuned values, and the trade-offs associated with higher or lower values:
@@ -104,7 +104,7 @@ By carefully tuning these parameters, we improved the model's performance and ef
    - Used 4-bit quantization during inference, significantly reducing memory and computational requirements while retaining model performance.
    - 4-bit quantization is a technique used to reduce the precision of the weights and activations of a neural network from the standard 32-bit floating point to just 4 bits. This drastically reduces the memory footprint and computational requirements during inference which enables the deployment of large language models on resource-constrained hardware like CPUs. Despite the reduction in precision, advanced quantization techniques retain most of the model's performance, ensuring high-quality outputs with significantly improved efficiency.
 
-**(b)** 
+### (b) 
 ### Data-Centric Approach**:
 
 To improve the performance of our fine-tuned LLM, we focused on enhancing the quality and diversity of the instruction dataset. This approach ensures the model can generate accurate and context-aware travel recommendations.
