@@ -34,30 +34,30 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
 ### (a) 
 ### Model-Centric Approach
 
-The fine-tuning process was carefully optimized by experimenting with key hyperparameters to balance performance, memory efficiency, and training stability. Below, we highlight the most critical hyperparameters, their tuned values, and the trade-offs associated with higher or lower values:
+The fine-tuning process was carefully optimized by experimenting with key hyperparameters to balance performance, memory efficiency, and training stability. Below, we highlight the most critical hyperparameters, how we adjusted them is indicated in the brackets. We also mention their tuned values and the trade-offs associated with higher or lower values:
 
-1. **Batch Size and Gradient Accumulation**:
+1. **Batch Size and Gradient Accumulation** (increased):
    - **Tuned Values**: `per_device_train_batch_size=2` and `gradient_accumulation_steps=8`.
    - **Effect**: A batch size of 2 managed the memory constraints of the NVIDIA T4 GPU while ensuring stable training. Gradient accumulation steps of 8 simulated an effective batch size of 16, improving training stability without exceeding memory limits.
    - **Trade-Offs**:
      - Higher batch size improves convergence and training speed but significantly increases GPU memory requirements.
      - Lower batch size might lead to noisier gradient updates and slower convergence.
 
-2. **Learning Rate**:
+2. **Learning Rate** (decreased):
    - **Tuned Value**: `learning_rate=1e-4`.
    - **Effect**: A lower learning rate ensured that the model learned more gradually, reducing the likelihood of overshooting the optimal weights and improving stability.
    - **Trade-Offs**:
      - Higher learning rates risk divergence or overshooting the optimal weights.
      - Lower learning rates slow convergence, potentially requiring more training time.
 
-3. **Warmup Steps**:
+3. **Warmup Steps** (increased):
    - **Tuned Value**: `warmup_steps=50`.
    - **Effect**: Gradually increasing the learning rate in the initial steps stabilized training by preventing large gradients from disrupting early progress.
    - **Trade-Offs**:
      - Higher warmup steps ensure smoother initialization but delay full utilization of the optimal learning rate.
      - Fewer warmup steps might lead to instability in early training phases.
 
-4. **Epochs and Training Steps**:
+4. **Epochs and Training Steps** (limited):
    - **Tuned Values**: `num_train_epochs=1`, `max_steps=1000`.
    - **Effect**: Limited epochs and steps allowed us to adapt the model within the constraints of our hardware while achieving meaningful performance improvements.
    - **Trade-Offs**:
@@ -70,7 +70,7 @@ The fine-tuning process was carefully optimized by experimenting with key hyperp
    - **Precision Settings**: Mixed precision (`fp16` or `bf16` depending on hardware support).
      - **Effect**: Reduced memory consumption and accelerated computations without compromising model accuracy.
 
-6. **Regularization**:
+6. **Regularization** (increased weight decay):
    - **Weight Decay**: `weight_decay=0.05`.
    - **Effect**: Penalized large weight values, promoting generalization and reducing the risk of overfitting.
    - **Trade-Offs**:
