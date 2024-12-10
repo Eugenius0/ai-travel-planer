@@ -172,7 +172,7 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 | "What are the main attractions in Paris?"              | "There are many famous landmarks and museums in Paris. Some of the main attractions include:\n\n1. The Eiffel Tower - This is one of the most iconic and photographed buildings in the world, standing 1,063 feet high. You can take an elevator or stairs to the top for spectacular views of the city.\n\n2. The Louvre - This is the world's largest art museum, housing a collection of more than 550,000 works of art, including the Mona Lisa and the Venus de Milo.\n\n3. Notre Dame Cathedral - This beautiful Gothic cathedral was built in the 12th century and is considered one of the most famous churches in the world." | 7.5187                |
 
 
-![image](https://github.com/user-attachments/assets/c770728a-3f9f-4611-b5ed-f5c4b4b07c7e)
+![image](https://github.com/user-attachments/assets/ee5f1b1e-850d-46a0-b51d-92f905a2b2d8)
 
 
 ## Bleu Score
