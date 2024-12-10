@@ -24,7 +24,7 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
    - Checkpointing and memory-efficient techniques were implemented to enable training on a single GPU.
 
 6. **Deployment**:
-   - The fine-tuned large language model has been saved to [my HuggingFace account](https://huggingface.co/Eugenius0/lora_model) and is publicly accessible there. The Travel Planner UI has been developed using Gradio and deployed through Google Colab to generate a temporary link which is valid for 72h. The reason for doing that instead of deploying it within a Huggingface Space is explained here [Issue #1](https://github.com/Eugenius0/ai-travel-planner/issues/1) in more detail.
+   - The fine-tuned large language model has been saved to [my HuggingFace account](https://huggingface.co/Eugenius0/lora_model) and is publicly accessible there. The Travel Planner UI has been developed using Gradio and deployed through Google Colab to generate a temporary link [AI Travel Planner](https://15c05c70e01f52935f.gradio.live/) which is valid for 72h. The reason for doing that instead of deploying it within a Huggingface Space is explained here [Issue #1](https://github.com/Eugenius0/ai-travel-planner/issues/1) in more detail.
 
 ---
 
@@ -273,7 +273,39 @@ By carefully testing these models, we ensured that the chosen LLM aligns with ou
 - #### Gradio UI:
 Offers an intuitive interface for querying the model and generating travel recommendations/advices.
 
-![image](https://github.com/user-attachments/assets/43b30230-5acd-42dd-94fd-2988a526cc0f)
+![image](https://github.com/user-attachments/assets/537940e0-e1bb-4aa7-9aae-0011fa60df79)
+![image](https://github.com/user-attachments/assets/e149e350-f978-49b0-98c4-d81fc62158f4)
+
+
+Output of the example where user specifies city as "Paris", preferences as "food" and trip duration as "2":
+
+system
+
+Cutting Knowledge Date: December 2023
+Today Date: 10 Dec 2024
+
+user
+
+Create a travel plan to visit Paris during 2 days, focusing on food. Include suggested activities, landmarks to visit, and any local tips.assistant
+
+Paris is famous for its delicious cuisine, from croissants to baguettes, escargots to macarons, French pastries are renowned worldwide. To experience the best of French gastronomy in two short days, we have devised this itinerary.
+
+Day one:
+
+- Start your day with breakfast at Café de Flore (172 Boulevard Saint-Germain) or Les Deux Magots (6 Place Saint-Germain-Des-Prés), both iconic cafes in the heart of the Latin Quarter. Enjoy croissant and coffee or tea, or perhaps indulge in their delightful pastry selection.
+- Visit the Musée Rodin, a museum dedicated to the works of French sculptor Auguste Rodin, where you can admire his most famous creations such as The Thinker.
+- For lunch, head to Le Comptoir du Relais, known for its classic French dishes at affordable prices like Coq au Vin and Steak Tartare. Make sure to book ahead as it gets crowded.
+- Afternoon: Explore Montmartre's charming streets lined with charming cafés, historic churches, and bohemian artists. Visit the Basilique du Sacré-Cœur for a breathtaking view over the city.
+- Dinner at L'Atelier de Joël Robuchon - an innovative eatery offering a unique dining experience. Each dish is cooked by staff members who display the cooking process through the glass partition.
+
+Day two:
+- Morning: Try your hand at making Macarones at Boulangerie Gérard Mulot – order a dozen assorted macarons and enjoy them while strolling around the picturesque neighborhood of Marais.
+- Lunchtime, dine at Le Grand Vefour, a legendary restaurant located under the old Royal Palace of France. This restaurant offers traditional French cuisine in elegant atmosphere.
+- In the afternoon, take a stroll along the Seine River and visit the Pont des Arts and the Ile de la Cité. Stroll across the Pont Neuf Bridge and explore the quaint streets leading up to Notre Dame Cathedral.
+- Evening: Dine at Septime, a critically acclaimed restaurant that serves seasonal French cuisine. Be sure to book well in advance due to limited availability.
+
+
+
 
 
 ---
@@ -288,5 +320,5 @@ Offers an intuitive interface for querying the model and generating travel recom
 
 ## Links
 - **Discussion on Task Challenges**: [Canvas Discussion](https://canvas.kth.se/courses/50172/discussion_topics/432284)
-- **Gradio App (temporary link)**: [AI Travel Planner](https://huggingface.co/spaces/Eugenius0/ai-travel-planner)
+- **Gradio App (temporary link)**: [AI Travel Planner](https://15c05c70e01f52935f.gradio.live/)
 - **Google Colab Inference Notebook**: [Colab Notebook](link)
