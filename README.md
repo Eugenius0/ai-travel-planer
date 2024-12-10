@@ -105,7 +105,7 @@ By carefully tuning these parameters, we improved the model's performance and ef
    - 4-bit quantization is a technique used to reduce the precision of the weights and activations of a neural network from the standard 32-bit floating point to just 4 bits. This drastically reduces the memory footprint and computational requirements during inference which enables the deployment of large language models on resource-constrained hardware like CPUs. Despite the reduction in precision, advanced quantization techniques retain most of the model's performance, ensuring high-quality outputs with significantly improved efficiency.
 
 ### (b) 
-### Data-Centric Approach**:
+### Data-Centric Approach:
 
 To improve the performance of our fine-tuned LLM, we focused on enhancing the quality and diversity of the instruction dataset. This approach ensures the model can generate accurate and context-aware travel recommendations.
 
