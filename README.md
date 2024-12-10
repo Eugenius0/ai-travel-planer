@@ -121,6 +121,7 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 3. **Integrating Additional Data Sources** (future work, not implemented due to computational and memory limits and to respect the given time constraints.):
    - Augment the dataset with:
      - **Travel Reviews**: User feedback from platforms like [TripAdvisor](https://www.kaggle.com/datasets/andrewmvd/trip-advisor-hotel-reviews).
+     - **Make My Trip Dataset**: Collection of travel records available [on Kaggle](https://www.kaggle.com/datasets/promptcloud/travel-listing-from-makemytrip).
 
 4. **Benefits**:
    - Increased generalization across diverse user inputs.
