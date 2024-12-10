@@ -183,33 +183,26 @@ The Feldberg is the highest point of the Black Forest, with an elevation of 1,49
 
 ## After Tuning Hyperparameters:
 
-| **Query**                                              | **Generated Output**                                         | **Inference Time (s)** |
-|--------------------------------------------------------|-------------------------------------------------------------|------------------------|
-| "In which state is Freiburg im Breisgau and name its most famous sight?" | "The most famous sight in Freiburg im Breisgau, located in Baden-Württemberg..." | 5.32                   |
-| "What are the main attractions in Paris?"              | "Paris, the City of Light, is known for its beautiful Eiffel Tower, Louvre Museum..." | 4.69                   |
+| **Query**                                              | **Generated Output**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | **Inference Time (s)** |
+|--------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| "In which state is Freiburg im Breisgau and name its most famous sight?" | "Freiburg im Breisgau is located in the state of Baden-Württemberg in Germany. It is famous for its Gothic Cathedral of the Immaculate Conception. This stunning cathedral was completed in 1343 and stands as an exemplary representation of medieval architecture in the Black Forest region."                                                                                                                                                                                                                      | 3.5184                |
+| "What are the main attractions in Paris?"              | "There are many famous landmarks and museums in Paris. Some of the main attractions include:\n\n1. The Eiffel Tower - This is one of the most iconic and photographed buildings in the world, standing 1,063 feet high. You can take an elevator or stairs to the top for spectacular views of the city.\n\n2. The Louvre - This is the world's largest art museum, housing a collection of more than 550,000 works of art, including the Mona Lisa and the Venus de Milo.\n\n3. Notre Dame Cathedral - This beautiful Gothic cathedral was built in the 12th century and is considered one of the most famous churches in the world." | 7.5187                |
 
----
 
-### Explanation of Each Row:
-
-1. **Row 1**: The model was asked about Freiburg im Breisgau. It generated a response detailing its location and a famous sight in approximately 5.32 seconds.
-2. **Row 2**: The model was queried about Paris's main attractions, responding with key landmarks in about 4.69 seconds.
-
-This table provides a summary of the model's performance and the responses generated for the test queries.
-
-![image](https://github.com/user-attachments/assets/cd87ac57-5b62-471b-bbbc-812032f356cd)
+![image](https://github.com/user-attachments/assets/abb74402-86d0-4a5d-9255-833489953ac2)
 
 
 ## Bleu Score
 
 **BLEU (Bilingual Evaluation Understudy)** is a metric used to evaluate the quality of machine-generated text by comparing it to one or more reference texts. It measures the overlap of n-grams (sequences of words) between the generated and reference texts, with higher scores indicating closer similarity and better quality.
 
-| **Query**                                              | **Generated Output**                                         | **BLEU Score** |
-|--------------------------------------------------------|-------------------------------------------------------------|----------------|
-| "In which state is Freiburg im Breisgau and name its most famous sight?" | "Freiburg im Breisgau is in the state of Baden-Württemberg, and its most famous sight is the Freiburger Münster." | 0.2082         |
-| "What are the main attractions in Paris?"              | "The City of Light has plenty to offer. Here are some key attractions: Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral." | 0.0204         |
+| **Query**                                              | **Generated Output**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **BLEU Score** |
+|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
+| "In which state is Freiburg im Breisgau and name its most famous sight?" | "Freiburg im Breisgau is located in the German state of Baden-Württemberg. The most famous sight in this city is the Black Forest Church, also known as the St. Peter Church, a church of the Catholic Church and one of the largest in Germany."                                                                                                                                                                                                                             | 0.0317         |
+| "What are the main attractions in Paris?"              | "Paris, the capital city of France, has numerous attractions to explore, both historically and naturally. Here are the main attractions to visit:\n\n1. The Eiffel Tower: The iron latticework structure and iron beam tower is one of the world’s most iconic landmarks and an ideal place for observation.\n\n2. Louvre Museum: The museum is famous for housing the Mona Lisa painting, along with a diverse array of cultural treasures from all around the world.\n\n3. Montmartre: The charming artist district has a rich history and features picturesque narrow streets, a historic church, and some beautiful works of art.\n\n4. Notre Dame" | 0.0352         |
 
-![image](https://github.com/user-attachments/assets/a3788e5c-27cb-43bf-814c-a116a4bfa4f3)
+
+![image](https://github.com/user-attachments/assets/33a67b0c-da78-48e5-bb34-058fe3388630)
 
 ### Based on Human Judgement:
 
@@ -217,15 +210,13 @@ This table provides a summary of the model's performance and the responses gener
 **In which state is Freiburg im Breisgau and name its most famous sight?**
 
 **Output:**  
-Freiburg im Breisgau is located in the state of Baden-Württemberg in Germany.
-
-The most famous sight in Freiburg im Breisgau is the Münster, a 13th-century cathedral known for its remarkable architecture. The Münster is home to the famous Black Forest Woodcarver's Guild, and its most notable feature is the impressive clock tower.
+Fribourg, which is German for Freiburg, is a city in the German state of Baden-Württemberg. The most famous sight in Freiburg is the Minster of Freiburg, also known as the Freiburger Münster, a striking Gothic cathedral that dates back to the 14th century. The Minster stands 129.7 meters tall, making it the highest church tower in Europe and the tallest building in Freiburg. It's an iconic landmark in the city and attracts thousands of visitors every year.
 
 ### Question 2
 **How high is the Feldberg in the Black Forest?**
 
 **Output:**  
-The Feldberg is the highest point of the Black Forest, with an elevation of 1,493 meters (4,893 ft) above sea level.
+The Feldberg, which is a mountain in the Black Forest (Schwarzwald) in Germany, has an elevation of 1,493 meters (4,893 feet).
 
 
 ### 2. Evaluating Multiple LLMs
