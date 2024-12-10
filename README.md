@@ -157,6 +157,8 @@ This table provides a summary of the model's performance and the responses gener
 ![image](https://github.com/user-attachments/assets/cd87ac57-5b62-471b-bbbc-812032f356cd)
 
 
+## Bleu Score
+
 **BLEU (Bilingual Evaluation Understudy)** is a metric used to evaluate the quality of machine-generated text by comparing it to one or more reference texts. It measures the overlap of n-grams (sequences of words) between the generated and reference texts, with higher scores indicating closer similarity and better quality.
 
 | **Query**                                              | **Generated Output**                                         | **BLEU Score** |
@@ -204,6 +206,8 @@ This table provides a summary of the model's performance and the responses gener
 
 ![image](https://github.com/user-attachments/assets/cd87ac57-5b62-471b-bbbc-812032f356cd)
 
+
+## Bleu Score
 
 **BLEU (Bilingual Evaluation Understudy)** is a metric used to evaluate the quality of machine-generated text by comparing it to one or more reference texts. It measures the overlap of n-grams (sequences of words) between the generated and reference texts, with higher scores indicating closer similarity and better quality.
 
