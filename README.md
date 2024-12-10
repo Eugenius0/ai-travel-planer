@@ -185,7 +185,7 @@ To improve the performance of our fine-tuned LLM, we focused on enhancing the qu
 | "What are the main attractions in Paris?"              | "Paris, France, is a world-renowned city with a rich history and culture that offers numerous attractions for travelers. Here are some of the main attractions in Paris:\n\n1. The Eiffel Tower (Tour Eiffel): This iconic tower was constructed for the 1889 World's Fair and is one of the most recognizable landmarks in the world. Visitors can take the stairs or elevator to the top for stunning views of the city.\n\n2. The Louvre: This museum houses some of the world's most famous works of art, including Leonardo da Vinci's 'Mona Lisa.'\n\n3. The Seine River: Visitors can take scenic boat tours along this iconic river." | 0.2461         |
 
 
-![image](https://github.com/user-attachments/assets/33a67b0c-da78-48e5-bb34-058fe3388630)
+![image](https://github.com/user-attachments/assets/c770728a-3f9f-4611-b5ed-f5c4b4b07c7e)
 
 
 ### **Outcome of Results**
