@@ -1,4 +1,4 @@
-# AI Travel Planner Project - Parameter Efficient Fine-Tunning (PEFT) with Low-Rank Adaptation (LoRA) - Link to application: [AI Travel Planner](https://888fbed536d4fc2252.gradio.live/)
+# AI Travel Planner Project - Parameter Efficient Fine-Tunning (PEFT) with Low-Rank Adaptation (LoRA)
 
 ## Project Overview
 
@@ -23,7 +23,7 @@ This project is part of Lab 2 for the ID2223 course at KTH. The goal is to fine-
    - A Gradio interface [Gradio UI](#gradio-ui) enables users to input their desired city and travel preferences to generate tailored travel plans.
 
 6. **Deployment**:
-   - The fine-tuned large language model has been saved to [my HuggingFace account](https://huggingface.co/Eugenius0/lora_model_tuned) and is publicly accessible there. The Travel Planner UI has been developed using Gradio and deployed through Google Colab to generate a temporary link [AI Travel Planner](https://888fbed536d4fc2252.gradio.live/) which is valid for 72h. The reason for doing that instead of deploying it within a Huggingface Space is explained here [Issue #1](https://github.com/Eugenius0/ai-travel-planner/issues/1) in more detail.
+   - The fine-tuned large language model has been saved to [my HuggingFace account](https://huggingface.co/Eugenius0/lora_model_tuned) and is publicly accessible there. The Travel Planner UI has been developed using Gradio and deployed through Google Colab to generate a temporary link [AI Travel Planner](https://888fbed536d4fc2252.gradio.live/) which is valid for 72h only when the Google Colab session is running. The reason for doing that instead of deploying it within a Huggingface Space is explained here [Issue #1](https://github.com/Eugenius0/ai-travel-planner/issues/1) in more detail.
 
 ---
 
